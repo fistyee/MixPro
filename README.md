@@ -142,5 +142,15 @@ python -m torch.distributed.launch --nproc_per_node 8 --master_port 12345  main.
 --cfg configs/deit_base.yaml --data-path <imagenet-path> --batch-size 64 \
 
 
+# Citation
+@inproceedings{zhaomixpro,
+  title={MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling for Vision Transformer},
+  author={Zhao, Qihao and Huang, Yangyu and Hu, Wei and Zhang, Fan and Liu, Jun},
+  booktitle={The Eleventh International Conference on Learning Representations}
+}
+# License
+The project is released under the MIT License
+
+
 
 
