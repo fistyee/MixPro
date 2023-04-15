@@ -5,7 +5,7 @@ MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling for Vi
 
 ## Code will release soon 
 
-### Install
+## Install
 
 We recommend using the pytorch docker `nvcr>=21.05` by
 nvidia: https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch.
@@ -143,14 +143,16 @@ python -m torch.distributed.launch --nproc_per_node 8 --master_port 12345  main.
 python -m torch.distributed.launch --nproc_per_node 8 --master_port 12345  main.py \
 --cfg configs/deit_base.yaml --data-path <imagenet-path> --batch-size 64 \
 
+```
 
-# Citation
-@inproceedings{zhaomixpro,
-  title={MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling for Vision Transformer},
-  author={Zhao, Qihao and Huang, Yangyu and Hu, Wei and Zhang, Fan and Liu, Jun},
-  booktitle={The Eleventh International Conference on Learning Representations}
+
+### Citation
+@inproceedings{zhaomixpro, \
+  title={MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling for Vision Transformer}, \
+  author={Zhao, Qihao and Huang, Yangyu and Hu, Wei and Zhang, Fan and Liu, Jun}, \
+  booktitle={The Eleventh International Conference on Learning Representations} \
 }
-# License
+### License
 The project is released under the MIT License
 
 
