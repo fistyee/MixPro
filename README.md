@@ -1,6 +1,8 @@
 # MixPro
 MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling for Vision Transformer [Official, ICLR 2023]
 
+![MixPro](./fig.png)
+
 ## Code will release soon 
 
 ### Install
