@@ -1,9 +1,8 @@
 # MixPro
-MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling for Vision Transformer [Official, ICLR 2023]
+MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling for Vision Transformer [Official, ICLR 2023,[paper](https://arxiv.org/pdf/2304.12043.pdf)] 
 
 ![MixPro](./fig.png)
 
-## Code will release soon 
 
 ## Install
 
@@ -127,24 +126,35 @@ For example, to train `MixPro DeiT Transformer` with 8 GPU on a single node for 
 
 ```bash
 python -m torch.distributed.launch --nproc_per_node 8 --master_port 12345  main.py \
---cfg configs/deit/deit_tiny.yaml --data-path <imagenet-path> --batch-size 128
+--cfg configs/deit/deit_tiny_patch14_mask56_224_alpha1.yaml --data-path <imagenet-path> --batch-size 128
 ```
 
 `MixPro DeiT-S`:
 
 ```bash
 python -m torch.distributed.launch --nproc_per_node 8 --master_port 12345  main.py \
---cfg configs/deit/deit_small.yaml --data-path <imagenet-path> --batch-size 128
+--cfg configs/deit/deit_small_patch14_mask56_224_alpha1.yaml --data-path <imagenet-path> --batch-size 128
 ```
 
 `MixPro DeiT-B`:
 
 ```bash
 python -m torch.distributed.launch --nproc_per_node 8 --master_port 12345  main.py \
---cfg configs/deit_base.yaml --data-path <imagenet-path> --batch-size 64 \
+--cfg configs/deit_base_patch14_mask112_224_alpha1_attn_all.yaml --data-path <imagenet-path> --batch-size 64 \
 
 ```
 
+### Config
+
+```
+#in config.py
+#Probability of switching to mixpro when both mixup and mixpro enabled
+_C.AUG.MASKMIX_PROB = 0.5
+# MaskMix alpha , maskmix enabled if > 0
+_C.AUG.MASKMIX_ALPHA = 1.0
+# PAL 
+_C.AUG.PAL_ATTN = True
+```
 
 ### Citation
 @inproceedings{zhaomixpro, \
@@ -152,6 +162,9 @@ python -m torch.distributed.launch --nproc_per_node 8 --master_port 12345  main.
   author={Zhao, Qihao and Huang, Yangyu and Hu, Wei and Zhang, Fan and Liu, Jun}, \
   booktitle={The Eleventh International Conference on Learning Representations} \
 }
+### Acknowledgements
+The project is based on [Swin](https://github.com/microsoft/Swin-Transformer) and [Vit(unofficial)](https://github.com/lucidrains/vit-pytorch) 
+
 ### License
 The project is released under the MIT License
 
