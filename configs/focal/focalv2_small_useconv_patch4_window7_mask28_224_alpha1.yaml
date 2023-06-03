@@ -1,0 +1,21 @@
+MODEL:
+  TYPE: focalv2
+  NAME: focalv2_small_patch4_window7_mask28_224_alpha1
+  DROP_PATH_RATE: 0.3
+  MASK_PATCH_SIZE: 28
+  FOCAL:
+    USE_CONV_EMBED: True
+    EMBED_DIM: 96
+    DEPTHS: [2, 2, 18, 2]
+    NUM_HEADS: [3, 6, 12, 24]
+    WINDOW_SIZE: 7 
+    FOCAL_POOL: "fc"
+    FOCAL_STAGES: [0, 1, 2, 3]
+    FOCAL_LEVELS: [2, 2, 2, 2]
+    FOCAL_WINDOWS: [7, 5, 3, 1]
+    EXPAND_SIZES: [3, 3, 3, 3]    
+    FOCAL_TOPK: 128
+AUG:
+    MASKMIX_ALPHA: 1.
+    MASKMIX_PROB: 0.5
+~                          

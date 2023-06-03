@@ -1,0 +1,13 @@
+MODEL:
+  TYPE: swin
+  NAME: swin_tiny_patch4_window7_mask56_224_alpha1
+  DROP_PATH_RATE: 0.2
+  MASK_PATCH_SIZE: 56  
+  SWIN:
+    EMBED_DIM: 96
+    DEPTHS: [ 2, 2, 6, 2 ]
+    NUM_HEADS: [ 3, 6, 12, 24 ]
+    WINDOW_SIZE: 7
+AUG:
+  MASKMIX_ALPHA: 1.
+  MASKMIX_PROB: 0.5

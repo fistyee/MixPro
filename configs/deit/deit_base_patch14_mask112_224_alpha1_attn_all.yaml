@@ -1,0 +1,15 @@
+MODEL:
+  TYPE: deit
+  NAME: deit_base_patch14_mask56_224_alpha1
+  DROP_PATH_RATE: 0.1
+  PATCH_SIZE: 14
+  MASK_PATCH_SIZE: 56
+  DEIT:
+    PATCH_SIZE: 14
+    EMBED_DIM: 768
+    DEPTHS: 12
+    NUM_HEADS: 12
+AUG:
+  MASKMIX_PROB: 0.5
+  MASKMIX_ALPHA: 1.0
+  PAL_ATTN: True
