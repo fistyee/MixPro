@@ -157,10 +157,13 @@ _C.AUG.PAL_ATTN = True
 ```
 
 ### Citation
-@inproceedings{zhaomixpro, \
-  title={MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling for Vision Transformer}, \
-  author={Zhao, Qihao and Huang, Yangyu and Hu, Wei and Zhang, Fan and Liu, Jun}, \
-  booktitle={The Eleventh International Conference on Learning Representations} \
+@inproceedings{\
+zhao2023mixpro,\
+title={MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling for Vision Transformer},\
+author={Qihao Zhao and Yangyu Huang and Wei Hu and Fan Zhang and Jun Liu},\
+booktitle={The Eleventh International Conference on Learning Representations },\
+year={2023},\
+url={https://openreview.net/forum?id=dRjWsd3gwsm}\
 }
 ### Acknowledgements
 The project is based on [Swin](https://github.com/microsoft/Swin-Transformer) and [Vit(unofficial)](https://github.com/lucidrains/vit-pytorch) 
