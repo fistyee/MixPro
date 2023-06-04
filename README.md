@@ -164,7 +164,7 @@ title={MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling
 author={Qihao Zhao and Yangyu Huang and Wei Hu and Fan Zhang and Jun Liu},\
 booktitle={The Eleventh International Conference on Learning Representations },\
 year={2023},\
-url={ https://openreview.net/forum?id=dRjWsd3gwsm } \
+url={https://openreview.net/forum?id=dRjWsd3gwsm} \
 }
 ### Acknowledgements
 The project is based on [Swin](https://github.com/microsoft/Swin-Transformer) and [Vit(unofficial)](https://github.com/lucidrains/vit-pytorch) 
