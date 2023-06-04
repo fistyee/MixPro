@@ -159,13 +159,13 @@ _C.AUG.PAL_ATTN = True
 ### Citation
 If you find our work / code implementation useful for your own research, please cite our paper. \
 ```
-@inproceedings{\
-zhao2023mixpro,\
-title={MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling for Vision Transformer},\
-author={Qihao Zhao and Yangyu Huang and Wei Hu and Fan Zhang and Jun Liu},\
-booktitle={The Eleventh International Conference on Learning Representations },\
-year={2023},\
-url={https://openreview.net/forum?id=dRjWsd3gwsm} \
+@inproceedings{
+zhao2023mixpro,
+title={MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling for Vision Transformer},
+author={Qihao Zhao and Yangyu Huang and Wei Hu and Fan Zhang and Jun Liu},
+booktitle={The Eleventh International Conference on Learning Representations },
+year={2023},
+url={https://openreview.net/forum?id=dRjWsd3gwsm} 
 }
 ```
 ### Acknowledgements
