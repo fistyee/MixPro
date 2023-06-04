@@ -157,7 +157,7 @@ _C.AUG.PAL_ATTN = True
 ```
 
 ### Citation
-If you find our work / code implementation useful for your own research, please cite our paper.
+If you find our work / code implementation useful for your own research, please cite our paper. \
 @inproceedings{\
 zhao2023mixpro,\
 title={MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling for Vision Transformer},\
