@@ -1,5 +1,11 @@
-# MixPro
-MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling for Vision Transformer [Official, ICLR 2023,[paper](https://arxiv.org/pdf/2304.12043.pdf)] 
+## MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling for Vision Transformer [Official, ICLR 2023,[paper](https://arxiv.org/pdf/2304.12043.pdf)] 🔥
+### [Qihao Zhao](https://scholar.google.com/citations?hl=zh-CN&user=sECb19EAAAAJ)<sup>1</sup>, [Yangyu Huang](https://scholar.google.com/citations?hl=zh-CN&user=ycNodL0AAAAJ)<sup>2</sup>, [Wei Hu](https://scholar.google.com/citations?user=ACJickwAAAAJ&hl=zh-CN)<sup>1</sup>, [Fan Zhang](https://scholar.google.com/citations?user=CujOi1kAAAAJ&hl=zh-CN)<sup>1</sup>, [Jun Liu](https://scholar.google.com/citations?hl=zh-CN&user=Q5Ild8UAAAAJ)<sup>2</sup>
+
+1 Beijing University of Chemical Technology
+
+2 Microsoft Research Asia
+
+2 Singapore University of Technology and Design
 
 ![MixPro](./fig.png)
 
