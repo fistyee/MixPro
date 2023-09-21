@@ -32,7 +32,7 @@ def MaskMix(samples, flip_samples, alpha, mask_num, scale_, scale, targets, flip
     ratio = np.random.beta(alpha, alpha) 
     #mask_ratio = [np.random.beta(alpha, alpha)  for i in range(batch_size)]
     mask_ratio = [ratio  for i in range(batch_size)]
-
+    
     mask_count = [int(np.ceil(token_count * mask_ratio[i])) for i in range(batch_size)]
     
     mask_ratio = [mask_count[i]/token_count for i in range(batch_size)]
@@ -46,7 +46,7 @@ def MaskMix(samples, flip_samples, alpha, mask_num, scale_, scale, targets, flip
     mask = [mask[i].repeat(scale, axis=0).repeat(scale, axis=1)  for i in range(batch_size)]
     mask = torch.from_numpy(np.array(mask)).to(samples.device)
     mask = mask.unsqueeze(1).repeat(1,3,1,1) #(128,224,224)->(128,1,224,224)->(128,3,224,224)
-    
+    mask = mask[:,:,:samples.shape[2],:samples.shape[2]]
     samples = samples * mask + flip_samples * (1-mask)
 
     mask_ratio = torch.Tensor(mask_ratio).to(samples.device)
