@@ -177,10 +177,12 @@ def train_one_epoch(config, model, criterion, data_loader, optimizer, epoch, mix
     num_classes = config.MODEL.NUM_CLASSES
     label_smoothing = config.MODEL.LABEL_SMOOTHING
     #num of mask
-    mask_num = input_size // mask_patch_size
+    #mask_num = input_size // mask_patch_size
+    mask_num = math.ceil(input_size / mask_patch_size)
     #num of patch
     scale_ = mask_patch_size // model_patch_size
     scale =  mask_patch_size
+    patch_num = input_size // model_patch_size
 
     start = time.time()
     end = time.time()
@@ -222,7 +224,9 @@ def train_one_epoch(config, model, criterion, data_loader, optimizer, epoch, mix
                 lam_old = mask_ratio
                  
                 mask = torch.from_numpy(mask)
+                mask = mask[:,:patch_num,:patch_num]
                 mask = torch.flatten(mask, 1)
+               
                 mask = mask.to(samples.device)
                 w1, w2 = torch.sum((mask) * attn, dim=1), torch.sum((1-mask) * attn, dim=1) 
                 lam = w1 / (w1+w2)
@@ -285,6 +289,7 @@ def train_one_epoch(config, model, criterion, data_loader, optimizer, epoch, mix
                 targets_b = targets[index]
                 lam_old = mask_ratio
                 mask = torch.from_numpy(mask)
+                mask = mask[:,:patch_num,:patch_num]
                 mask = torch.flatten(mask, 1)
                 mask = mask.to(samples.device)
                 w1, w2 = torch.sum((mask) * attn, dim=1), torch.sum((1-mask) * attn, dim=1) 
